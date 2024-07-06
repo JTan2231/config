@@ -1,0 +1,12 @@
+[Unit]
+Description=Start up networking services
+
+[Service]
+Type=oneshot
+ExecStart=/bin/true
+ExecStartPre=/usr/bin/systemctl start dhcpcd
+ExecStartPre=/usr/bin/systemctl start iwd
+
+[Install]
+WantedBy=default.target
+

@@ -1,0 +1,26 @@
+general {
+    colors = true
+    interval = 5
+}
+
+order += "wireless wlan0"
+order += "battery 0"
+order += "tztime local"
+
+wireless wlan0 {
+    format_up = "%essid%quality"
+    format_down = "W: down"
+}
+
+battery 0 {
+    format = "%percentage"
+    low_threshold = 10
+    threshold_type = percentage
+    color_good = "#00FF00"
+    color_degraded = "#FFFF00"
+    color_bad = "#FF0000"
+}
+
+tztime local {
+    format = "%Y-%m-%d %H:%M:%S"
+}
