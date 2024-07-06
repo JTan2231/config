@@ -1,2 +1,10 @@
-[discord]
-align=left
+[BATTERY]
+command=~/.config/i3blocks/battery/battery_info.sh
+interval=3
+
+[time]
+command=date +%T
+interval=1
+align=center
+min_width=1860
+align=center

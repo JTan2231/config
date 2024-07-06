@@ -31,7 +31,9 @@ exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 exec_always --no-startup-id picom --config ~/.config/picom/picom.conf -b
-exec_always nitrogen --set-zoom-fill /home/joey/background/background.jpg
+exec_always nitrogen --set-zoom-fill /home/joey/.config/background/eva2.jpeg
+
+exec alacritty
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -193,20 +195,20 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
     colors {
-        background #514c4e
+        background #000000
         statusline #e7e4e0
         separator  #666666
 
-        focused_workspace  #514c4e #514c4e #000000
-        active_workspace   #514c4e #514c4e #000000
+        focused_workspace  #000000 #000000 #000000
+        active_workspace   #000000 #000000 #000000
         inactive_workspace #00000000 #222222 #888888
-        urgent_workspace   #514c4e #900000 #000000
-        binding_mode       #514c4e #900000 #000000
+        urgent_workspace   #000000 #900000 #000000
+        binding_mode       #000000 #900000 #000000
     }
 
     position top
     workspace_buttons no
-    status_command i3status
+    status_command i3blocks
 }
 
 # Remove title bar for all windows
@@ -222,3 +224,4 @@ client.unfocused        #00000000 #222222 #000000 #00000000 #222222
 client.urgent           #514c4e #900000 #000000 #514c4e #900000
 client.placeholder      #00000000 #0c0c0c #000000 #00000000 #0c0c0c
 
+for_window [class=".*"] border none
