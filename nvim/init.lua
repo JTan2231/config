@@ -213,6 +213,7 @@ if not vim.loop.fs_stat(lazypath) then
   vim.fn.system { 'git', 'clone', '--filter=blob:none', '--branch=stable', lazyrepo, lazypath }
 end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
+vim.opt.rtp:prepend '/home/joey/nvim/gpt.nvim'
 
 -- [[ Configure and install plugins ]]
 --
@@ -257,6 +258,13 @@ require('lazy').setup({
         changedelete = { text = '~' },
       },
     },
+  },
+
+  {
+    dir = '~/nvim/gpt.nvim',
+    config = function()
+      require('gpt').setup()
+    end,
   },
 
   {

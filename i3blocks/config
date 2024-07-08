@@ -1,10 +1,20 @@
+[general]
+separator = false
+markup = pango
+
 [BATTERY]
-command=~/.config/i3blocks/battery/battery_info.sh
+command=~/.config/i3blocks/battery.sh
 interval=3
+align=left
+
+[wifi]
+command=~/.config/i3blocks/wifi.sh
+interval=10
+min_width=865
+align=left
 
 [time]
 command=date +%T
 interval=1
-align=center
-min_width=1860
-align=center
+min_width=963
+align=left

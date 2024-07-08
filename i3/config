@@ -195,24 +195,21 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
     colors {
-        background #000000
+        background #00000000
         statusline #e7e4e0
-        separator  #666666
+        separator  #000000
 
-        focused_workspace  #000000 #000000 #000000
-        active_workspace   #000000 #000000 #000000
+        focused_workspace  #000000 #000000 #ffffff
+        active_workspace   #000000 #000000 #ffffff
         inactive_workspace #00000000 #222222 #888888
-        urgent_workspace   #000000 #900000 #000000
-        binding_mode       #000000 #900000 #000000
+        urgent_workspace   #000000 #900000 #ffffff
+        binding_mode       #000000 #900000 #ffffff
     }
 
     position top
     workspace_buttons no
     status_command i3blocks
 }
-
-# Remove title bar for all windows
-for_window [class=".*"] border pixel 2
 
 gaps inner 10
 gaps outer 10
